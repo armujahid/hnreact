@@ -3,7 +3,7 @@ import Item from './Item'
 import { getTopStories } from '../utils/Api'
 import InfiniteScroll from 'react-infinite-scroller';
 import paginate from 'paginate-array'
-class TopStories extends Component {
+class Stories extends Component {
   state = {
     stories : null,
     renderlist: [],
@@ -49,4 +49,4 @@ class TopStories extends Component {
   }
 }
 
-export default TopStories;
+export default Stories;

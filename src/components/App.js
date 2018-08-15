@@ -2,7 +2,7 @@ import React, { PureComponent, Fragment } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import NotFound from './404Page'
 import NavBar from './NavBar'
-import TopStories from './TopStories'
+import Stories from './Stories'
 
 class App extends PureComponent {
   render() {
@@ -15,7 +15,7 @@ class App extends PureComponent {
               <Switch>
                 {
                   <Fragment>
-                    <Route path='/' exact component={TopStories} />
+                    <Route path='/' exact component={Stories} />
                   </Fragment>
                 }
                 <Route component={NotFound} />
