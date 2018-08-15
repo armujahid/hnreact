@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Story from './Story'
+import Job from './Job'
 import { getItem } from '../utils/Api'
 
 class Item extends Component {
@@ -20,6 +21,9 @@ class Item extends Component {
     }
     if (item.type === 'story') {
       return <Story item={item}/>
+    }
+    if (item.type === 'job') {
+      return <Job item={item}/>
     }
     return (
       <div>
