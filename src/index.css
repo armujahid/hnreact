@@ -3,3 +3,45 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.main-container {
+  margin-top: 3px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.loading-bar {
+  background-color: blue;
+  height: 3px;
+  position: absolute;
+}
+
+.avatar {
+  height: 40px;
+  border-radius: 25px;
+  margin: 10px;
+}
+
+.navbar-nav li a {
+  line-height: 40px;
+}
+
+.nav-item {
+  cursor: pointer;
+}
+
+td {
+  line-height: 60px;
+}
+
+div.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+[class*=col-] {
+  padding: 15px;
+}
