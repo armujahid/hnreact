@@ -11,7 +11,7 @@ export async function getItem(id) {
     }
 }
 
-async function getList(name) {
+export async function getList(name) {
   try {
       const itemResonse = await axios.get(`${api}/${name}.json`)
       return { resolved: true, data: itemResonse.data }
@@ -20,16 +20,5 @@ async function getList(name) {
   }
 }
 
-export async function getTopStories() {
-  return getList('topstories')
-}
-
-export async function getNewStories() {
-  return getList('newstories')
-}
-
-export async function getBestStories() {
-  return getList('beststories')
-}
 
 

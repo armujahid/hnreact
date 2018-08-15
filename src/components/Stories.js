@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Item from './Item'
-import { getTopStories } from '../utils/Api'
+import { getList } from '../utils/Api'
 import InfiniteScroll from 'react-infinite-scroller';
 import paginate from 'paginate-array'
 class Stories extends Component {
@@ -10,7 +10,7 @@ class Stories extends Component {
     hasMoreItems: true
   }
   async componentDidMount() {
-    const result = await getTopStories()
+    const result = await getList(this.props.storytype)
     console.log(result.data)
     if (result.resolved) {
       this.setState({ stories : result.data})

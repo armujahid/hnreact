@@ -15,7 +15,12 @@ class App extends PureComponent {
               <Switch>
                 {
                   <Fragment>
-                    <Route path='/' exact component={Stories} />
+                    <Route path='/' exact render={() => <Stories storytype="topstories"/>} />
+                    <Route path='/new' render={() => <Stories storytype="newstories"/>} />
+                    <Route path='/best' render={() => <Stories storytype="beststories"/>} />
+                    <Route path='/ask' render={() => <Stories storytype="askstories"/>} />
+                    <Route path='/show' render={() => <Stories storytype="showstories"/>} />
+                    <Route path='/jobs' render={() => <Stories storytype="jobstories"/>} />
                   </Fragment>
                 }
                 <Route component={NotFound} />
