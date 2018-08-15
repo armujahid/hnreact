@@ -24,7 +24,7 @@ class NavBar extends PureComponent {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand tag={Link} to="/">HNReact</NavbarBrand>
+          <NavbarBrand tag={Link} to="/">HN React</NavbarBrand>
           <Fragment>
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
