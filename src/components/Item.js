@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Story from './Story'
 import Job from './Job'
 import { getItem } from '../utils/Api'
+import CustomLoader from './CustomLoader'
 
 class Item extends Component {
   state = {
@@ -9,7 +10,6 @@ class Item extends Component {
   }
   async componentDidMount() {
     const result = await getItem(this.props.id)
-    console.log(result.data)
     if (result.resolved) {
       this.setState({ item : result.data})
     }
@@ -17,7 +17,7 @@ class Item extends Component {
   render() {
     const { item } = this.state
     if (!item) {
-      return null
+      return <CustomLoader />
     }
     if (item.type === 'story') {
       return <Story item={item}/>
