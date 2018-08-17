@@ -1,0 +1,27 @@
+language: node_js
+node_js:
+  - "stable"
+cache:
+  yarn: true
+  directories:
+  - node_modules
+install: yarn install
+script:
+  - yarn build
+  - cp CNAME ./build
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $githubToken
+  local_dir: build
+  on:
+    branch: master
+before_install: yarn global add greenkeeper-lockfile@1
+before_script: greenkeeper-lockfile-update
+after_script: greenkeeper-lockfile-upload
+# Trigger a push build on master and greenkeeper branches + PRs build on every branches
+# Avoid double build on PRs (See https://github.com/travis-ci/travis-ci/issues/1147)
+branches:
+  only:
+    - master
+    - /^greenkeeper.*$/
