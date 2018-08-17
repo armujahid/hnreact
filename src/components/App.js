@@ -13,16 +13,12 @@ class App extends PureComponent {
             <NavBar />
             <div className="container">
               <Switch>
-                {
-                  <Fragment>
-                    <Route path='/' exact render={() => <Stories storytype="topstories"/>} />
-                    <Route path='/new' render={() => <Stories storytype="newstories"/>} />
-                    <Route path='/best' render={() => <Stories storytype="beststories"/>} />
-                    <Route path='/ask' render={() => <Stories storytype="askstories"/>} />
-                    <Route path='/show' render={() => <Stories storytype="showstories"/>} />
-                    <Route path='/jobs' render={() => <Stories storytype="jobstories"/>} />
-                  </Fragment>
-                }
+                <Route path='/' exact render={() => <Stories storytype="topstories" key="1"/>} />
+                <Route path='/new' render={() => <Stories storytype="newstories" key="2"/>} />
+                <Route path='/best' render={() => <Stories storytype="beststories" key="3"/>} />
+                <Route path='/ask' render={() => <Stories storytype="askstories" key="4"/>} />
+                <Route path='/show' render={() => <Stories storytype="showstories" key="5"/>} />
+                <Route path='/jobs' render={() => <Stories storytype="jobstories" key="6"/>} />
                 <Route component={NotFound} />
               </Switch>
             </div>

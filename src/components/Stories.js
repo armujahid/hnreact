@@ -7,11 +7,11 @@ class Stories extends Component {
   state = {
     stories : null,
     renderlist: [],
-    hasMoreItems: true
+    hasMoreItems: true,
+    initialLoad: true
   }
   async componentDidMount() {
     const result = await getList(this.props.storytype)
-    console.log(result.data)
     if (result.resolved) {
       this.setState({ stories : result.data})
     }
@@ -21,7 +21,8 @@ class Stories extends Component {
     const pageItems = paginate(stories, pageNumber, 10) //10 items per page
     this.setState({
       renderlist: [...renderlist, ...pageItems.data],
-      hasMoreItems: pageItems.currentPage !== 2//pageItems.currentPage !== pageItems.totalPages
+      initialLoad: false,
+      hasMoreItems: pageItems.currentPage !== pageItems.totalPages
     })
 
   }
@@ -38,7 +39,7 @@ class Stories extends Component {
         pageStart={0}
         loadMore={this.loadItems}
         hasMore={hasMoreItems}
-        threshold={50}
+        initialLoad={this.state.initialLoad}
         loader={loader}>
 
         <div className="stories">
