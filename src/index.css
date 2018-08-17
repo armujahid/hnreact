@@ -14,28 +14,13 @@ body {
   padding: 10px;
 }
 
-.loading-bar {
-  background-color: blue;
-  height: 3px;
-  position: absolute;
-}
-
-.avatar {
-  height: 40px;
-  border-radius: 25px;
-  margin: 10px;
-}
-
 .navbar-nav li a {
   line-height: 40px;
 }
 
 .card {
   cursor: pointer;
-}
-
-td {
-  line-height: 60px;
+  margin-bottom: 10px;
 }
 
 div.card {
@@ -45,3 +30,10 @@ div.card {
 [class*=col-] {
   padding: 15px;
 }
+
+.card-text {
+  font-size: .8rem;
+  color: #666;
+  margin: 0;
+}
+
