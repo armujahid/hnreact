@@ -1,11 +1,8 @@
 {
-  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:jest/recommended"],
   "parser": "babel-eslint",
   "env": {
     "browser": true,
     "es6": true
-  },
-  "rules": {
-    "no-case-declarations": 0
   }
 }

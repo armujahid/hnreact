@@ -21,8 +21,10 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "axios-mock-adapter": "^1.15.0",
     "babel-eslint": "^8.2.6",
     "eslint": "^5.3.0",
+    "eslint-plugin-jest": "^21.21.0",
     "eslint-plugin-react": "^7.11.1"
   }
 }
