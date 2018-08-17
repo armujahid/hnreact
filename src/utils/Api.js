@@ -1,10 +1,9 @@
 import axios from 'axios'
-
-const api = 'https://hacker-news.firebaseio.com/v0/'
+import { API_URL } from './constants'
 
 export async function getItem(id) {
     try {
-        const itemResonse = await axios.get(`${api}/item/${id}.json`)
+        const itemResonse = await axios.get(`${API_URL}/item/${id}.json`)
         return { resolved: true, data: itemResonse.data }
     } catch (error) {
         return { resolved: false, data: error };
@@ -13,7 +12,7 @@ export async function getItem(id) {
 
 export async function getList(name) {
   try {
-      const itemResonse = await axios.get(`${api}/${name}.json`)
+      const itemResonse = await axios.get(`${API_URL}/${name}.json`)
       return { resolved: true, data: itemResonse.data }
   } catch (error) {
       return { resolved: false, data: error }

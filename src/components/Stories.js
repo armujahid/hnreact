@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import Item from './Item'
 import { getList } from '../utils/Api'
 import InfiniteScroll from 'react-infinite-scroller';
 import paginate from 'paginate-array'
-class Stories extends Component {
+class Stories extends PureComponent {
   state = {
     stories : null,
     renderlist: [],

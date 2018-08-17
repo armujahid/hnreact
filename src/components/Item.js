@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import Story from './Story'
 import Job from './Job'
 import { getItem } from '../utils/Api'
 import CustomLoader from './CustomLoader'
 
-class Item extends Component {
+class Item extends PureComponent {
   state = {
     item : null
   }
