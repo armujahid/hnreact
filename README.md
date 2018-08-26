@@ -1,4 +1,4 @@
-# Hacker News React [![Build Status](https://travis-ci.org/armujahid/hnreact.svg?branch=master)](https://travis-ci.org/armujahid/hnreact)
+# Hacker News React [![Build Status](https://travis-ci.org/armujahid/hnreact.svg?branch=master)](https://travis-ci.org/armujahid/hnreact) [![Greenkeeper badge](https://badges.greenkeeper.io/armujahid/hnreact.svg)](https://greenkeeper.io/)
 
 This is a hacker news client written in react. Currently this has very limited functionality.
 
