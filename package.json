@@ -24,5 +24,11 @@
     "axios-mock-adapter": "^1.15.0",
     "eslint-plugin-jest": "^21.21.0",
     "eslint-plugin-react": "^7.11.1"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
