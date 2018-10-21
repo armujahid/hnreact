@@ -7,6 +7,7 @@ cache:
   - node_modules
 install: yarn install
 script:
+  - yarn test
   - yarn build
   - cp CNAME ./build
 deploy:
