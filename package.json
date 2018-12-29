@@ -12,7 +12,7 @@
     "react-infinite-scroller": "^1.2.2",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.2",
-    "reactstrap": "^6.5.0"
+    "reactstrap": "^7.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
