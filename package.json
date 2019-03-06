@@ -7,7 +7,7 @@
     "bootstrap": "^4.1.3",
     "paginate-array": "^2.1.0",
     "react": "^16.6.3",
-    "react-content-loader": "^3.4.1",
+    "react-content-loader": "^4.1.0",
     "react-dom": "^16.6.3",
     "react-infinite-scroller": "^1.2.2",
     "react-router-dom": "^4.3.1",
