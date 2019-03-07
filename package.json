@@ -11,7 +11,7 @@
     "react-dom": "^16.6.3",
     "react-infinite-scroller": "^1.2.2",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.5",
+    "react-scripts": "2.1.6",
     "reactstrap": "^6.5.0"
   },
   "scripts": {
