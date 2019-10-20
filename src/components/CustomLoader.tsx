@@ -2,7 +2,7 @@ import React from 'react';
 import ContentLoader from "react-content-loader"
 import { Card } from 'reactstrap';
 
-const CustomLoader = props => (
+const CustomLoader = (props: any) => (
   <Card>
     <ContentLoader
       height={95}
