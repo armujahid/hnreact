@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { NavLink } from 'react-router-dom'
 
-function NotFound() {
+const NotFound = () => {
   return (
     <Fragment>
       <div>404 Not Found</div>
