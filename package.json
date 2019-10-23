@@ -25,6 +25,7 @@
   },
   "devDependencies": {
     "@types/react-infinite-scroller": "^1.2.1",
+    "@types/reactstrap": "^8.0.5",
     "axios-mock-adapter": "^1.17.0",
     "eslint-plugin-jest": "^22.19.0",
     "eslint-plugin-react": "^7.16.0"
