@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^0.19.0",
-    "bootstrap": "^4.3.1",
+    "bootstrap": "^4.4.0",
     "paginate-array": "^2.1.0",
     "react": "^16.10.2",
     "react-content-loader": "^4.3.2",
