@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "axios-mock-adapter": "^1.17.0",
-    "eslint-plugin-jest": "^23.0.0",
+    "eslint-plugin-jest": "^23.8.0",
     "eslint-plugin-react": "^7.16.0"
   },
   "browserslist": [
