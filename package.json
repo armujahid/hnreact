@@ -23,7 +23,7 @@
   "devDependencies": {
     "axios-mock-adapter": "^1.17.0",
     "eslint-plugin-jest": "^23.0.0",
-    "eslint-plugin-react": "^7.16.0"
+    "eslint-plugin-react": "^7.20.0"
   },
   "browserslist": [
     ">0.2%",
