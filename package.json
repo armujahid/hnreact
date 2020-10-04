@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.19.0",
     "bootstrap": "^4.3.1",
+    "next": "^9.5.3",
     "paginate-array": "^2.1.0",
     "react": "^16.10.2",
     "react-content-loader": "^5.0.0",
@@ -15,10 +16,10 @@
     "reactstrap": "^8.1.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "dev": "next dev",
+    "start": "next start",
+    "build": "next build && next export",
+    "test": "react-scripts test --env=jsdom"
   },
   "devDependencies": {
     "axios-mock-adapter": "^1.17.0",
