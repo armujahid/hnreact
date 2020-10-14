@@ -5,43 +5,48 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem,
-  NavLink } from 'reactstrap';
-import { Link } from 'react-router-dom'
+} from 'reactstrap';
+import { useRouter } from 'next/router'
+
+const Links = [
+  { name: 'Top', linkTo: '/' },
+  { name: 'New', linkTo: '/new' },
+  { name: 'Best', linkTo: '/best' },
+  { name: 'Ask', linkTo: '/ask' },
+  { name: 'Show', linkTo: '/show' },
+  { name: 'Jobs', linkTo: '/jobs' },
+]
+
+const GenLink = ({ name, linkTo }) => {
+  const router = useRouter()
+  return (
+    <li className="nav-item">
+      <a
+        className="nav-link"
+        onClick={() => router.push(linkTo)}
+        style={{ cursor: 'pointer' }}>{name}</a>
+    </li>
+  )
+}
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false)
 
-  const toggle = () =>  {
+  const toggle = () => {
     setIsOpen(!isOpen)
   }
 
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand tag={Link} to="/">HN React</NavbarBrand>
+        <NavbarBrand href='/'>HN React</NavbarBrand>
         <Fragment>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink tag={Link} to="/">Top</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink tag={Link} to="/new">New</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink tag={Link} to="/best">Best</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink tag={Link} to="/ask">Ask</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink tag={Link} to="/show">Show</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink tag={Link} to="/jobs">Jobs</NavLink>
-              </NavItem>
+              {
+                Links.map((each, index) => <GenLink key={index} {...each} />)
+              }
             </Nav>
           </Collapse>
         </Fragment>
