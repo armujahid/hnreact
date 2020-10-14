@@ -30,20 +30,19 @@ const Stories = props => {
   if (!stories) {
     return null
   }
-  const loader = <div className="loader">Loading ...</div>;
+  const loader = <div className="loader" key={0}>Loading ...</div>;
 
   return (
-    <InfiniteScroll
-      pageStart={0}
-      loadMore={loadItems}
-      hasMore={hasMoreItems}
-      initialLoad={initialLoad}
-      loader={loader}>
-
-      <div className="stories">
+    <div className="stories">
+      <InfiniteScroll
+        pageStart={0}
+        loadMore={loadItems}
+        hasMore={hasMoreItems}
+        initialLoad={initialLoad}
+        loader={loader}>
           {renderlist.map((id)=><Item key={id} id={id} />)}
-      </div>
-    </InfiniteScroll>
+      </InfiniteScroll>
+    </div>
   )
 }
 
