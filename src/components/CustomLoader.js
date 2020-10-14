@@ -8,8 +8,8 @@ const CustomLoader = props => (
       height={95}
       width={1108}
       speed={2}
-      primaryColor="#f3f3f3"
-      secondaryColor="#ecebeb"
+      backgroundColor="#f3f3f3"
+      foregroundColor="#ecebeb"
       {...props}
     >
       <rect x="25" y="20" rx="5" ry="5" width="319" height="20" />
