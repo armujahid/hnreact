@@ -7,7 +7,7 @@ import {
   Nav,
   NavItem,
   NavLink } from 'reactstrap';
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -19,28 +19,28 @@ const NavBar = () => {
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand tag={Link} to="/">HN React</NavbarBrand>
+        <NavbarBrand tag={Link} href="/">HN React</NavbarBrand>
         <Fragment>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink tag={Link} to="/">Top</NavLink>
+                <NavLink tag={Link} href="/">Top</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink tag={Link} to="/new">New</NavLink>
+                <NavLink tag={Link} href="/new">New</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink tag={Link} to="/best">Best</NavLink>
+                <NavLink tag={Link} href="/best">Best</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink tag={Link} to="/ask">Ask</NavLink>
+                <NavLink tag={Link} href="/ask">Ask</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink tag={Link} to="/show">Show</NavLink>
+                <NavLink tag={Link} href="/show">Show</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink tag={Link} to="/jobs">Jobs</NavLink>
+                <NavLink tag={Link} href="/jobs">Jobs</NavLink>
               </NavItem>
             </Nav>
           </Collapse>
