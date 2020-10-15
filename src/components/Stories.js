@@ -21,10 +21,11 @@ const Stories = props => {
   }, [props.storytype])
 
   const loadItems = (pageNumber) => {
+
     const pageItems = paginate(stories, pageNumber, 10) //10 items per page
     setrenderlist([...renderlist, ...pageItems.data])
     setinitialLoad(false)
-    sethasMoreItems(pageItems.currentPage !== pageItems.totalPages)
+    sethasMoreItems((pageItems.currentPage !== pageItems.totalPages) && pageItems.data.length !== 0)
   }
 
   if (!stories) {
